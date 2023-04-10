@@ -1,0 +1,12 @@
+{
+  "name": "move-binary-format",
+  "version": "1.0.0",
+  "description": "--- id: vm title: Virtual Machine custom_edit_url: https://github.com/diem/move/edit/main/language/move-binary-format/README.md ---",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

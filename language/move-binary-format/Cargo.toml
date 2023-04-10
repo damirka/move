@@ -20,6 +20,14 @@ move-core-types = { path = "../move-core/types" }
 serde = { version = "1.0.124", default-features = false }
 arbitrary = { version = "1.1.7", optional = true, features = ["derive"] }
 
+# wasm support
+js-sys = { version = "0.3.61", optional = true }
+wasm-bindgen = { version = "0.2.62", optional = true }
+getrandom = { version = "0.2.9", features = ["js"], optional = true }
+hex = { version = "0.4.3", optional = true }
+serde_json = { version = "1.0.64", optional = true }
+serde-wasm-bindgen = { version = "0.5.0", optional = true }
+
 [dev-dependencies]
 proptest = "1.0.0"
 proptest-derive = "0.3.0"
@@ -29,3 +37,7 @@ serde_json = "1.0.64"
 [features]
 default = []
 fuzzing = ["proptest", "proptest-derive", "arbitrary", "move-core-types/fuzzing"]
+wasm = ["wasm-bindgen", "getrandom", "js-sys", "hex", "serde_json", "wasm-bindgen", "serde-wasm-bindgen"]
+
+[lib]
+crate-type = ["cdylib"]

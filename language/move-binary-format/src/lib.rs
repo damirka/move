@@ -24,6 +24,9 @@ pub mod proptest_types;
 pub mod serializer;
 pub mod views;
 
+#[cfg(feature = "wasm")]
+pub mod wasm;
+
 #[cfg(test)]
 mod unit_tests;
 
